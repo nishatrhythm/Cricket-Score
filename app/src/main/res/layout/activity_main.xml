@@ -215,6 +215,7 @@
             app:cornerRadius="50dp"
             app:rippleColor="@color/teal_900"
             app:strokeColor="@color/teal_700"
+            android:layout_marginBottom="48dp"
             app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
