@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Cricket Score</string>
+    <string name="welcome">Welcome</string>
+    <string name="totalOvers">Total Overs</string>
+    <string name="targetRuns">Target Runs</string>
+    <string name="currentRuns">Current Runs</string>
+    <string name="remainingBowls">Remaining Bowls</string>
+    <string name="calculate">Calculate</string>
 </resources>
