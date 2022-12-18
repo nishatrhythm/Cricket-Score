@@ -6,4 +6,5 @@
     <string name="currentRuns">Current Runs</string>
     <string name="remainingBowls">Remaining Bowls</string>
     <string name="calculate">Calculate</string>
+    <string name="exitFromApp">Press BACK again to exit</string>
 </resources>
