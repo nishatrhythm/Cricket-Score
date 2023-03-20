@@ -13,6 +13,45 @@
         tools:context=".MainActivity">
 
 
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            app:layout_constraintBottom_toTopOf="@id/homePageTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). -->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/searchbar_scrolling_view_behavior">
+                <!-- Screen content goes here. -->
+            </androidx.core.widget.NestedScrollView>
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.search.SearchBar
+                    android:id="@+id/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search across app" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.google.android.material.search.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type here what you are searching"
+                app:layout_anchor="@id/search_bar">
+                <!-- Search suggestions/results go here (ScrollView, RecyclerView, etc.). -->
+            </com.google.android.material.search.SearchView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/homePageTitle"
             android:layout_width="match_parent"
@@ -28,7 +67,7 @@
             app:layout_constraintBottom_toTopOf="@id/totalOvers"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/searchBar">
 
         </com.google.android.material.textview.MaterialTextView>
 
@@ -203,12 +242,40 @@
             app:cornerRadius="50dp"
             app:rippleColor="@color/md_theme_light_inversePrimary"
             app:strokeColor="@color/md_theme_light_primary"
+            android:shadowColor="@color/md_theme_light_onTertiaryContainer"
             android:layout_marginBottom="48dp"
-            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/calculateButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/remainingBowls" />
 
+<!--        <com.google.android.material.materialswitch.MaterialSwitch-->
+<!--            android:id="@+id/switchButton1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:checked="true"-->
+<!--            android:text="Switch ON"-->
+<!--            android:fontFamily="@font/google_sans_text_bold"-->
+<!--            android:textColor="@color/md_theme_light_secondary"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/switchButton2"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/calculateButton"/>-->
+
+<!--        <com.google.android.material.materialswitch.MaterialSwitch-->
+<!--            android:id="@+id/switchButton2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:checked="false"-->
+<!--            android:text="Switch OFF"-->
+<!--            android:fontFamily="@font/google_sans_text_bold"-->
+<!--            android:textColor="@color/md_theme_light_secondary"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintBottom_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/switchButton1"/>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
