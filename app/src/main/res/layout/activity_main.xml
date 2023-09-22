@@ -28,7 +28,8 @@
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_behavior="@string/searchbar_scrolling_view_behavior">
+                app:layout_behavior="@string/searchbar_scrolling_view_behavior"
+                tools:ignore="PrivateResource">
                 <!-- Screen content goes here. -->
             </androidx.core.widget.NestedScrollView>
 
@@ -39,14 +40,15 @@
                     android:id="@+id/search_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Search across app" />
+                    android:hint="@string/search_across_app" />
             </com.google.android.material.appbar.AppBarLayout>
 
             <com.google.android.material.search.SearchView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Type here what you are searching"
-                app:layout_anchor="@id/search_bar">
+                app:layout_anchor="@id/search_bar"
+                tools:ignore="HardcodedText">
                 <!-- Search suggestions/results go here (ScrollView, RecyclerView, etc.). -->
             </com.google.android.material.search.SearchView>
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
@@ -105,7 +107,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/google_sans_text_bold"
-                android:inputType="number" />
+                android:inputType="number"
+                tools:ignore="VisualLintTextFieldSize" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -143,7 +146,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/google_sans_text_bold"
-                android:inputType="number" />
+                android:inputType="number"
+                tools:ignore="VisualLintTextFieldSize" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -181,7 +185,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/google_sans_text_bold"
-                android:inputType="number" />
+                android:inputType="number"
+                tools:ignore="VisualLintTextFieldSize" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -221,7 +226,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/google_sans_text_bold"
-                android:inputType="number" />
+                android:inputType="number"
+                tools:ignore="VisualLintTextFieldSize" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -247,7 +253,8 @@
             app:layout_constraintBottom_toTopOf="@id/calculateButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/remainingBowls" />
+            app:layout_constraintTop_toBottomOf="@id/remainingBowls"
+            tools:ignore="VisualLintButtonSize" />
 
 <!--        <com.google.android.material.materialswitch.MaterialSwitch-->
 <!--            android:id="@+id/switchButton1"-->

@@ -7,4 +7,5 @@
     <string name="remainingBowls">Remaining Bowls</string>
     <string name="calculate">Calculate</string>
     <string name="exitFromApp">Press BACK again to exit</string>
+    <string name="search_across_app">Search across app</string>
 </resources>
